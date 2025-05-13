@@ -1,0 +1,12 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    environment:
+      OLLAMA_NUM_PARALLEL: 6
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama:/ollama
+volumes:
+  ollama:
+    driver: local
